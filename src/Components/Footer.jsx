@@ -13,7 +13,7 @@ const Footer = ({color}) => {
     }
   return (
     <div className='footer' style={style}>
-      <p>&copy;&nbsp;All Rights Reserved 2023 | Made with <span style={{color:'red'}}>❤</span> by Vamsi </p>
+      <p>&copy;&nbsp;All Rights Reserved 2023 | Made with <span style={{color:'red'}}>❤</span> by CSE </p>
     </div>
   )
 }

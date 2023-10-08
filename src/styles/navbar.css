@@ -107,9 +107,6 @@ svg{
     {
         color: black;
     }
-    nav a:hover::after{
-        width: 100%;
-    }
     .nav-head
     {
         display: flex;
