@@ -7,3 +7,8 @@
     height: 90vh;
     width: 100vw;
 }
+.gallery img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
