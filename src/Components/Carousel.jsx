@@ -17,7 +17,7 @@ export const Carousel = ({ data }) => {
     return (
         <div className="carousel">
             <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
-            {data.map((item,idx) => {
+            { data && data.map((item,idx) => {
                 return (
                     <img
                         src={item.imageurl} key={idx}

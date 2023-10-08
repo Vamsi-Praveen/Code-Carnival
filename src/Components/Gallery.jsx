@@ -24,7 +24,7 @@ const Gallery = () => {
     <>
       <Navbar color={"#fff"}/>
       <div className='gallery'>
-        <Carousel data={data}/>
+        {data && <Carousel data={data}/>}
       </div>
     </>
   )
