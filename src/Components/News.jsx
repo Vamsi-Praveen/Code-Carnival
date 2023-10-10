@@ -8,6 +8,7 @@ const News = () => {
   async function get_news() {
     await axios.get("http://localhost:8000/announcements/all")
       .then((res) => {
+        console.log(res.data.reverse())
         setNews(res.data)
       })
   }
