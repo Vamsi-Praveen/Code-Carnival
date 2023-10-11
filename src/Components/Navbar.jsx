@@ -30,7 +30,8 @@ const Navbar = ({ color, link }) => {
         <nav style={{ color: link }} className={isOpen?"nav-active":"nav"}>
           <Link to="/">HOME</Link>
           <Link to="/about">ABOUT</Link>
-          <Link to="/coding">CODING</Link>
+          <Link to="/register">REGISTER</Link>
+          <Link to="/coding">EVENT REPORTS</Link>
           <Link to="/gallery">GALLERY</Link>
           <Link to="/news">ANNOUNCEMENTS</Link>
          
