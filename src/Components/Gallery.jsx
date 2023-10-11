@@ -1,9 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import '../styles/gallery.css'
 import Navbar from './Navbar'
-import image from '../assets/about-1.jpg'
-import image1 from '../assets/about-2.jpg'
-import image2 from '../assets/about.jpg'
 import { Carousel } from './Carousel'
 import axios from "axios"
 

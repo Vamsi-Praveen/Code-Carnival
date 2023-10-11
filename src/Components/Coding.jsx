@@ -8,6 +8,7 @@ import axios from "axios"
 const Coding = () => {
   const [winnerData, setWinnerData] = useState(null)
   const [runnerData, setRunnerData] = useState(null)
+  const [codingData, setCodingData] = useState()
 
   const [data, setData] = useState({
     year: '',
@@ -23,9 +24,10 @@ const Coding = () => {
     // setString(keyword);
     axios.get(`http://localhost:8000/coding/${keyword}`)
       .then((res) => {
-
+        console.log(res.data)
         setWinnerData(res.data.winner)
         setRunnerData(res.data.runner)
+        setCodingData(res.data)
       })
 
   }
@@ -82,8 +84,20 @@ const Coding = () => {
           </form>
         </div>
         <div className="coding-data">
-          {winnerData && <Card name={winnerData.name} dept={winnerData.dept} image={winnerData.image} roll={winnerData.roll} />}
-          {runnerData && <Card name={runnerData.name} dept={runnerData.dept} image={runnerData.image} roll={runnerData.roll} />}
+          {winnerData && codingData ?
+            <div className='data'>
+              <p><b>Event Date</b>: {codingData.date}</p>
+              <p><b>Cordinator</b>: {codingData.cordinator} </p>
+              <p><b>Participants</b>: {codingData.participants} </p>
+              <p><b>Location and Venue</b>: {codingData.location} </p>
+              <p><b>REPORT</b>: {codingData.report}</p>
+            </div>
+            : <h3>No Data Found</h3>
+          }
+          <div className="card-container">
+            {winnerData && <Card rank="Winner" name={winnerData.name} dept={winnerData.dept} image={winnerData.image} roll={winnerData.roll} />}
+            {runnerData && <Card rank="Runner" name={runnerData.name} dept={runnerData.dept} image={runnerData.image} roll={runnerData.roll} />}
+          </div>
         </div>
       </div>
     </>

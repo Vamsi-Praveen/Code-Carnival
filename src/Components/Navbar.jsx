@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import logo from '../assets/logo.png'
 
 const Navbar = ({ color, link }) => {
   const [isOpen,setOpen] = useState(false);
@@ -16,7 +17,12 @@ const Navbar = ({ color, link }) => {
     <div className='navbar' style={{ backgroundColor: color }}>
       <header>
         <div className='nav-head'>
-        <Link to='/'><h1 className='logo'>ACC.</h1></Link>
+        <Link to='/'>
+          <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+          <img src={logo} height={"40px"} width={"40px"}/>
+          <h2>ACC.</h2>
+          </div>
+        </Link>
         <div onClick={handleClick} className='nav-res'>
         {isOpen?close:menu}
         </div>
