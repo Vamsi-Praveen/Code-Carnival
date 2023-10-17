@@ -10,8 +10,7 @@ const Regsiter = () => {
         dept: '',
         year: '',
         hackerrank: '',
-        coding_date: '',
-        _id: ''
+        coding_date: ''
     })
     const handleChange = (e) => {
         const name = e.target.name;
@@ -22,7 +21,6 @@ const Regsiter = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        data._id = data.coding_date;
         axios.post('http://localhost:8000/user/register', data)
             .then((data) => {
                 if (data.status == 201) {
@@ -33,7 +31,7 @@ const Regsiter = () => {
                         dept: '',
                         year: '',
                         hackerrank: '',
-                        coding_date: '',    
+                        coding_date: '',
                     })
                 }
             })
@@ -52,15 +50,15 @@ const Regsiter = () => {
                     <h1>Register Now</h1>
                     <div className='input'>
                         <label>Enter Your Name:</label>
-                        <input type='text' name='name' placeholder="Name" value={data.name}onChange={handleChange} />
+                        <input type='text' name='name' placeholder="Name" value={data.name} onChange={handleChange} />
                     </div>
                     <div className='input'>
                         <label>Enter Your RollNo:</label>
-                        <input type='text' name='rollno' placeholder="Roll No" onChange={handleChange} value={data.rollno}/>
+                        <input type='text' name='rollno' placeholder="Roll No" onChange={handleChange} value={data.rollno} />
                     </div>
                     <div className='input'>
                         <label>Enter Your Department:</label>
-                        <input type='text' name='dept' placeholder="Department" onChange={handleChange} value={data.dept}/>
+                        <input type='text' name='dept' placeholder="Department" onChange={handleChange} value={data.dept} />
                     </div>
                     <div className='input'>
                         <label>Select Your Year:</label>
@@ -73,11 +71,11 @@ const Regsiter = () => {
                     </div>
                     <div className='input'>
                         <label>Enter Your Hackerrank Name:</label>
-                        <input type='text' name='hackerrank' placeholder="Hackerrank Profile" onChange={handleChange} value={data.hackerrank}/>
+                        <input type='text' name='hackerrank' placeholder="Hackerrank Profile" onChange={handleChange} value={data.hackerrank} />
                     </div>
                     <div className='input'>
                         <label>Date of Event:</label>
-                        <input type='date' name='coding_date' onChange={handleChange} value={data.coding_date}/>
+                        <input type='date' name='coding_date' onChange={handleChange} value={data.coding_date} />
                     </div>
                     <div className='input'>
                         <input type='submit' />
