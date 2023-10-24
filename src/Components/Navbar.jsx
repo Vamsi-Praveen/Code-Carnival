@@ -32,6 +32,7 @@ const Navbar = ({ color, link }) => {
           <Link to="/about">ABOUT</Link>
           <Link to="/register">REGISTER</Link>
           <Link to="/coding">EVENT REPORTS</Link>
+          <Link to="/questions">QUESTIONS</Link>
           <Link to="/gallery">GALLERY</Link>
           <Link to="/news">ANNOUNCEMENTS</Link>
          
