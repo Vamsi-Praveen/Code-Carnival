@@ -35,7 +35,7 @@ const Questions = () => {
                     <form onSubmit={handleSubmitClick}>
                         <div className="select-input">
                             <label>Select Date of Event</label>
-                            <input type='date' name="date" onChange={(e) => { setDate(e.target.value) }} />
+                            <input type='date' name="date"  required onChange={(e) => { setDate(e.target.value) }} />
                         </div>
                         <input type='submit' value={"Get Question Data"} />
                     </form>
