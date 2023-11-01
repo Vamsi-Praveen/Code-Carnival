@@ -35,7 +35,7 @@ const Questions = () => {
                     <form onSubmit={handleSubmitClick}>
                         <div className="select-input">
                             <label>Select Date of Event</label>
-                            <input type='date' name="date"  required onChange={(e) => { setDate(e.target.value) }} />
+                            <input type='date' name="date" required onChange={(e) => { setDate(e.target.value) }} />
                         </div>
                         <input type='submit' value={"Get Question Data"} />
                     </form>
@@ -48,15 +48,15 @@ const Questions = () => {
                                     data.map((el) => {
                                         return (
                                             <>
-                                                <h1>Question</h1>
-                                                <h3>{el.description}</h3>
-                                                <h4>Round:&nbsp;{el.round}</h4>
-                                                <h4>Marks:&nbsp;{el.marks}</h4>
+                                                <h1 >Question</h1>
+                                                <h3 >{el.description}</h3>
+                                                <h4 >Round:&nbsp;{el.round}</h4>
+                                                <h4 >Marks:&nbsp;{el.marks}</h4>
                                             </>
                                         )
                                     })
                                 ) : (
-                                    <h3 style={{textAlign:"center"}}>Hello,&nbsp;Please Select the Date</h3>
+                                    <h3 style={{ textAlign: "center" }}>Hello,&nbsp;Please Select the Date</h3>
                                 )
                             }
                         </div>

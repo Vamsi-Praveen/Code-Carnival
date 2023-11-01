@@ -8,8 +8,8 @@ const News = () => {
   async function get_news() {
     await axios.get("http://localhost:8000/announcements/all")
       .then((res) => {
-        console.log(res.data.reverse())
-        setNews(res.data)
+        // console.log(res.data.reverse())
+        setNews(res.data.reverse())
       })
   }
   useEffect(() => {
@@ -31,7 +31,7 @@ const News = () => {
               news && news.map((el) => {
                 return (
 
-                  <li><p>{el.description}</p></li>
+                  <li key={el._id}><p>{el.description}</p></li>
 
                 )
               })

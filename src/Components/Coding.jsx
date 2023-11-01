@@ -27,7 +27,6 @@ const Coding = () => {
         console.log(err)
       })
   }, [1])
-  console.log(dates)
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
@@ -43,7 +42,7 @@ const Coding = () => {
     }
     axios.get(`http://localhost:8000/coding/${keyword}`)
       .then((res) => {
-        console.log(res.data)
+        // console.log(res.data)
         setWinnerData(res.data.winner)
         setRunnerData(res.data.runner)
         setCodingData(res.data)
@@ -65,7 +64,6 @@ const Coding = () => {
       return { ...prev, [name]: value };
     })
   }
-  console.log(winnerData)
   return (
     <>
       <Navbar color={"#fff"} />
@@ -129,7 +127,7 @@ const Coding = () => {
                       <>
                         {
                           dates.map((el) => (
-                            <h3><b>{el.date}</b> -- Conducted by <b style={{ textTransform: "uppercase" }}>{el.dept}</b> </h3>
+                            <h3 key={el._id}><b>{el.date}</b> -- Conducted by <b style={{ textTransform: "uppercase" }}>{el.dept}</b> </h3>
                           ))
                         }
                       </>
